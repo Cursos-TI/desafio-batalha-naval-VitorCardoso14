@@ -13,8 +13,10 @@ int main() {
 char linha[10] = {'A','B','C','D','E','F','G','H','I','J'};
 
 //matriz 10x10
-int i, j, k, Tabuleiro[LINHAS][COLUNAS], linhaNavil1 = 4, colunaNavil1 = 3, tamanhoNavil1 = 2;
-
+int i, j, k, Tabuleiro[LINHAS][COLUNAS];
+int linhaNavio1 = 4;
+int colunaNavio1 = 3;
+int tamanhoNavio1 = 2;
 
 //comando para imprimir a linha
 printf("Tabuleiro Batalha Naval\n");
@@ -25,7 +27,11 @@ for ( i = 0; i < 10; i++)
 }
 printf("\n");
 
-
+for (int k = 0; k < tamanhoNavio1; k++) {
+    if (colunaNavio1 + k < COLUNAS) {
+        Tabuleiro[linhaNavio1][colunaNavio1 + k] = NAVIO;
+    }
+}
 
 
 //for para mostrar a matriz
